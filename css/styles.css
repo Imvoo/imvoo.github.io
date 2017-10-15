@@ -101,6 +101,7 @@ header {
     width: 15%;
     font-weight: 400;
     border-radius: 5px;
+    color: rgba(0,0,0,0.87);
 }
 
 .section {
@@ -109,7 +110,7 @@ header {
 
 .email {
     font-weight: 700;
-    color: rgba(0, 49, 113, 0.87);
+    color: rgba(39, 129, 188, 1);
     text-decoration: underline;
 }
 
@@ -136,9 +137,15 @@ header {
     align-items: center;
 }
 
-#cursor {
+.stars {
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.87);
+}
+
+.cursor {
     background-color: rgba(39, 129, 188, 1);
-    width: 5px;
+    width: 15px;
     height: inherit;
     display: inline-block;
     margin-left: 10px;

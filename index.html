@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -26,18 +27,18 @@
                 let text = "";
 
                 for (let _ = 0; _ < Number.parseInt(starCount); _++) {
-                    text += "●";
+                    text += "<i class='fa fa-star'></i>";
                 }
 
                 if (Number.parseFloat(starCount) % 1 != 0) {
-                    text += "●";
+                    text += "<i class='fa fa-star-half-o'></i>";
                 }
 
-                for (let _ = text.length; _ < 5; _++) {
-                    text += "○";
+                for (let _ = Number.parseFloat(starCount) + (starCount % 1); _ < 5; _++) {
+                    text += "<i class='fa fa-star-o'></i>";
                 }
 
-                item.childNodes[1].textContent = text;
+                item.childNodes[1].innerHTML = text;
             }
         }, true);
     </script>
@@ -59,7 +60,7 @@
                 <span id="roles" class="code_bg">
                     <span id="roles_text"></span>
                 </span>
-                <span id="cursor"></span>
+                <span class="cursor"></span>
             </div>
             <div>
                 I'm situated in Melbourne, Australia!
@@ -68,7 +69,7 @@
 
         <div class="section contact">
             Let's have a chat :)
-            <span class="email">me@imkevinvo.com</span>
+            <a class="email" href="mailto:me@imkevinvo.com">me@imkevinvo.com</a>
         </div>
     </div>
 
@@ -78,18 +79,18 @@
                 <span class="code_bg">
                     $ list-kevins-proficiencies
                 </span>
-                <span id="cursor"></span>
+                <span class="cursor"></span>
             </span>
         </div>
         <div class="section languages">
             <div class="list">
-                <div class="language" data-rating="3.5">C#
+                <div class="language" data-rating="4.5">Python
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="4">C#
                     <div class="stars"></div>
                 </div>
                 <div class="language" data-rating="3.5">C++
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="4">Python
                     <div class="stars"></div>
                 </div>
                 <div class="language" data-rating="3.5">Java
@@ -118,11 +119,33 @@
                 <div class="language" data-rating="4">Typescript
                     <div class="stars"></div>
                 </div>
-                <div class="language" data-rating="4">React
+                <div class="language" data-rating="4">React.js
                     <div class="stars"></div>
                 </div>
             </div>
         </div>
+
+        <div class="section languages">
+            <div class="list">
+                <div class="language" data-rating="3.5">React Native
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="3.5">Android (Java)
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="2.5">iOS (Swift)
+                    <div class="stars"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section hero">
+        <span class="code_line">
+            <span class="code_bg">
+                thanks for reading :)
+            </span>
+            <span class="cursor"></span>
+        </span>
     </div>
 </body>
 
