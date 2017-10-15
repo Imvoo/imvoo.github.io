@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+}
+
+header {
+    margin: 10px;
+}
+
+.content {
+    font-family: 'Open Sans';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgba(0,0,0,0.87);
+}
+
+.hero {
+    font-weight: 700;
+    font-size: 76px;
+    letter-spacing: -2px;
+    line-height: 91px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 38px;
+    letter-spacing: 0px;
+    line-height: 50px;
+}
+
+.contact {
+    font-weight: 300;
+    font-size: 19px;
+}
+
+.languages {
+    display: none;
+}
+
+.section {
+    padding: 10px;
+}
+
+.email {
+    font-weight: 700;
+    color: rgba(0, 49, 113, 0.87);
+    text-decoration: underline;
+}
+
+#cursor {
+    color: rgba(39, 129, 188, 1);
+    font-weight: 700;
+}
