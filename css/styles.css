@@ -4,6 +4,9 @@ html {
 }
 
 body {
+    font-family: "Roboto", "Arial";
+    font-weight: 400;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,6 +104,7 @@ header {
     width: 15%;
     font-weight: 400;
     border-radius: 5px;
+
     color: rgba(0,0,0,0.87);
 }
 
