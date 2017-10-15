@@ -12,7 +12,7 @@ var initialTypingDelay = 750;
 var delayBeforeRemove = 1500;
 var delayBeforeType = 400;
 
-window.onload = function (e) {
+window.addEventListener("load", () => {
     let field = document.getElementById("roles_text");
 
     let typeWord = (words, currentWordIndex, currentLetterIndex) => {
@@ -50,4 +50,4 @@ window.onload = function (e) {
     setTimeout(() => {
         typeWord(roles, 0, 0);
     }, initialTypingDelay);
-}
+}, true);
