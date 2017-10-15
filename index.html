@@ -16,13 +16,38 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="js/typing.js"></script>
+
+    <script>
+        window.addEventListener("load", () => {
+            let langs = document.getElementsByClassName("language");
+            for (let i = 0; i < langs.length; i++) {
+                let item = langs.item(i);
+                let starCount = item.getAttribute("data-rating");
+                let text = "";
+
+                for (let _ = 0; _ < Number.parseInt(starCount); _++) {
+                    text += "●";
+                }
+
+                if (Number.parseFloat(starCount) % 1 != 0) {
+                    text += "●";
+                }
+
+                for (let _ = text.length; _ < 5; _++) {
+                    text += "○";
+                }
+
+                item.childNodes[1].textContent = text;
+            }
+        }, true);
+    </script>
 </head>
 
 <body>
     <div class="content">
-        <div class="section logo">
+        <!-- <div class="section logo">
             <img src="img/square_logo.png" alt="imkevinvo Logo" />
-        </div>
+        </div> -->
 
         <div class="section hero">
             Hi, my name is Kevin Vo!
@@ -56,23 +81,48 @@
                 <span id="cursor"></span>
             </span>
         </div>
-        <!-- <div class="section languages">
-            I do a lot of work on many different languages...
+        <div class="section languages">
+            <div class="list">
+                <div class="language" data-rating="3.5">C#
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="3.5">C++
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="4">Python
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="3.5">Java
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="3.5">PHP
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="3">Golang
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="3">Lua
+                    <div class="stars"></div>
+                </div>
+            </div>
+        </div>
 
-            <ul>
-                <li>C#</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>Golang</li>
-                <li>HTML/CSS</li>
-                <li>Javascript</li>
-                <li>Typescript</li>
-                <li>React</li>
-                <li>PHP</li>
-                <li>Lua</li>
-            </ul>
-        </div> -->
+        <div class="section languages">
+            <div class="list">
+                <div class="language" data-rating="4.5">HTML/CSS
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="4">Javascript
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="4">Typescript
+                    <div class="stars"></div>
+                </div>
+                <div class="language" data-rating="4">React
+                    <div class="stars"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
