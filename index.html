@@ -17,31 +17,6 @@
 
     <script src="js/fontawesome-all.min.js"></script>
     <script src="js/typing.js"></script>
-
-    <script>
-        window.addEventListener("load", () => {
-            let langs = document.getElementsByClassName("language");
-            for (let i = 0; i < langs.length; i++) {
-                let item = langs.item(i);
-                let starCount = item.getAttribute("data-rating");
-                let text = "";
-
-                for (let _ = 0; _ < Number.parseInt(starCount); _++) {
-                    text += "<i class='fa fa-star'></i>";
-                }
-
-                if (Number.parseFloat(starCount) % 1 != 0) {
-                    text += "<i class='fa fa-star-half-o'></i>";
-                }
-
-                for (let _ = Number.parseFloat(starCount) + (starCount % 1); _ < 5; _++) {
-                    text += "<i class='fa fa-star-o'></i>";
-                }
-
-                item.childNodes[1].innerHTML = text;
-            }
-        }, true);
-    </script>
 </head>
 
 <body>
@@ -73,7 +48,23 @@
 
         <div class="section contact">
             Let's have a chat :)
-            <a class="email" href="mailto:me@imkevinvo.com">me@imkevinvo.com</a>
+            <a class="email" href="mailto:me@imkevinvo.com">
+                <i class="fas fa-link link_descriptor"></i>me@imkevinvo.com</a>
+        </div>
+
+        <div class="section social_media">
+            <i class="fas fa-link link_descriptor"></i>
+            <a href="https://github.com/Imvoo">
+                <div>
+                    <i class="fab fa-github"></i>
+                </div>
+            </a>
+
+            <a href="https://twitter.com/Imvoo">
+                <div>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -87,7 +78,7 @@
 
         <div class="projects">
             <div class="box">
-                <img src="img/projects_website.png" />
+                <img src="img/projects_website_opt.gif" />
                 <div class="title">
                     my website!
                 </div>
@@ -112,12 +103,12 @@
             </div>
 
             <div class="box">
-                <img src="img/projects_receiptd_1.png" />
+                <img class="img_top" src="img/projects_receiptd_1.png" />
                 <div class="title">
                     Receipt'd
                 </div>
                 <div class="project_description">
-                    Description here
+                    [Python,Vue] Entry into Unihack 2017 (Hackathon), an expense tracker that scans in receipts and displays it on the front-end.
                 </div>
 
                 <div class="project_link">
@@ -130,6 +121,8 @@
             </div>
 
             <div class="box">
+                <img src="img/projects_calcon.png" />
+
                 <div class="title">
                     CalCon
                 </div>
@@ -139,8 +132,21 @@
             </div>
 
             <div class="box">
+                <img src="img/projects_ants_opt.gif" />
+
                 <div class="title">
                     Ants
+                </div>
+                <div class="project_description">
+                    Description here
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/projects_neuralnetball_opt.gif" />
+
+                <div class="title">
+                    Neural Net Slime Volleyball
                 </div>
                 <div class="project_description">
                     Description here
@@ -149,135 +155,6 @@
         </div>
     </div>
 
-    <div class="content top">
-        <div class="section hero">
-            <span class="code_line">
-                <span class="code_bg">
-                    $ list-kevins-proficiencies
-                </span>
-                <span class="cursor"></span>
-            </span>
-        </div>
-        <div class="section languages">
-            <div class="list">
-                <div class="language" data-rating="4.5">Python
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="4">C#
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="3.5">C++
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="3.5">Java
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="3.5">PHP
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="3">Golang
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="3">Lua
-                    <div class="stars"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section languages">
-            <div class="list">
-                <div class="language" data-rating="4.5">HTML/CSS
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="4">Javascript
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="4">Typescript
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="4">React.js
-                    <div class="stars"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section languages">
-            <div class="list">
-                <div class="language" data-rating="3.5">React Native
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="3.5">Android (Java)
-                    <div class="stars"></div>
-                </div>
-                <div class="language" data-rating="2.5">iOS (Swift)
-                    <div class="stars"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="section hero">
-            <span class="code_line">
-                <span class="code_bg">
-                    $ swag-projects
-                </span>
-                <span class="cursor"></span>
-            </span>
-        </div>
-        <div class="section projects">
-            <li>
-                2017-H2 Project Tracker - Javascript (React), PHP (Yii)
-            </li>
-            <li>
-                2017-H2 Vulnerability Scanner - PHP (Yii), Python
-            </li>
-            <li>
-                2017-H2 Receipt'd - Javascript (Vue.js), Python
-            </li>
-            <li>
-                2017-H1 Neural Net Slime Volleyball - Java (Processing)
-            </li>
-            <li>
-                2017-H1 AI Ants Simulation - Java (Processing)
-            </li>
-            <li>
-                2017-H1 CalCon - Java (Android)
-            </li>
-            <li>
-                2017-H1 Grapple Run - C# (Unity Engine)
-            </li>
-            <li>
-                2017-H1 Pipe Analyzer - Python, FreeCAD
-            </li>
-            <li>
-                2016-H2 MiniZinc-server - Python
-            </li>
-            <li>
-                2016-H2 MiniZinc-webui - Javascript (React)
-            </li>
-            <li>
-                2016-H2 Dropball - Javascript (Phaser.io, Socket.io)
-            </li>
-            <li>
-                2016-H1 Battle Kart - C++ (DirectX, RakNet)
-            </li>
-            <li>
-                2016-H1 Bejewelled Blocks - C++ (DirectX)
-            </li>
-            <li>
-                2016-H1 Join - Javascript (Phaser.io, Socket.io)
-            </li>
-            <li>
-                2014-H1 GOsu - Golang
-            </li>
-            <li>
-                2014-H1 Displosu - Golang
-            </li>
-            <li>
-                2012-H1 Pokemon Defenders - C# (XNA)
-            </li>
-        </div>
-    </div>
     <div class="section hero">
         <span class="code_line">
             <span class="code_bg">
