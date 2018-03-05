@@ -281,7 +281,45 @@ header {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+}
+
+.timeline_section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline_section:last-child {
+  margin-bottom: 0;
+}
+
+.timeline_line {
+  background-color: rgba(0,0,0,0.1);
+  content: '.';
+  width: 1px;
+  color: rgba(0,0,0,0);
+  height: 100%;
+  margin-left: 40px;
+}
+
+.timeline_date {
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  padding: 10px;
+  border-radius: 15px;
+  border: 5px solid white;
+  left: -45px;
+  top: 5px;
+}
+
+.timeline_content {
+  margin-left: 45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .projects .box a {
