@@ -188,12 +188,12 @@ header {
 
 .box {
   color: white;
-  padding: 25px;
+  /* padding: 25px; */
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   margin: 10px;
-  width: 384px;
-  min-height: 189px;
+  width: 434px;
+  height: 239px;
 
   position: relative;
   overflow: hidden;
@@ -246,7 +246,7 @@ header {
   font-size: inherit;
   opacity: 0;
   /* background-color: rgba(0, 0, 0, 0.8); */
-  padding: 5px;
+  padding: 25px;
   border-radius: 3px;
   color: white
 }
@@ -362,4 +362,9 @@ header {
 
 .project_link a {
   font-size: 20px;
+}
+
+.box video {
+  z-index: -10;
+  width: 100%;
 }
